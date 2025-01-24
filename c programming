@@ -1,0 +1,24 @@
+//Wap to read 5 integers from keyboard that stores in an array and display entered numbers in the screen and also illustrate the memory location allocated by each array elements 
+#include<stdio.h>
+int main()
+{
+    int numbers[5];
+    int i;
+    
+    //Read 5 numbers from keyboard
+    printf("Enter 5 intergers:\n");
+    for(i = 0; i < 5; i++)
+    {
+        printf("Enter %d integer: ", i + 1);
+        scanf("%d",&numbers[i]);
+    }
+    printf("\n");
+    
+    //print the entered numbers
+    printf("Entered numbers are:\n");
+    for(i = 0; i < 5; i++)
+    {
+        printf("\tarr[%d] = %d , address[%d]  = %d\n",i,numbers[i],i,&numbers[i]);
+    }
+    return 0;
+}
